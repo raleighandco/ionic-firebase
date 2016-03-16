@@ -39,15 +39,17 @@
     <script src="scripts/configuration.js"></script>
     <!-- endbuild -->
   </head>
-  <body ng-app="starter">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Firebase App</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
   <body ng-app="ionicFirebaseApp">
+
+    <ion-tabs class="tabs-positive">
+      <ion-tab-icon="ion-home" ui-sref="home">
+        <ion-nav-view name="home"></ion-nav-view>
+      </ion-tab>
+      <ion-tab icon="ion-settings" ui-sref="help">
+        <ion-nav-view name="help"></ion-nav-view>
+      </ion-tab>
+    </ion-tabs>
+
   </body>
 </html>

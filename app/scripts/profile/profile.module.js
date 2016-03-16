@@ -1,3 +1,6 @@
+/*
+'use strict';
+
 angular.module('Profile', ['firebase']);
 
 angular.module('Profile')
@@ -14,3 +17,4 @@ angular.module('Profile')
       }
     }
   ]);
+*/

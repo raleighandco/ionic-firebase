@@ -1,3 +1,4 @@
+'use strict';
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -5,18 +6,14 @@
 // the 2nd parameter is an array of 'requires'
 
 //IFFE to avoid polluting the global namespace
-(function(){
-
-  'use strict';
-
 angular.module('ionicFirebaseApp', ['ionic', 'firebase']);
 
 angular.module('ionicFirebaseApp')
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
-        url: '/',
-        templateUrl: 'home/home.html',
+        url: '/home',
+        templateUrl: '/home/home.html',
         controller: 'Home'
       })
       .state('auth', {
@@ -24,10 +21,10 @@ angular.module('ionicFirebaseApp')
         templateUrl: '/auth/authorization.html'
       })
       .state('profile', {
-        url: '/',
+        url: '/profile',
         templateUrl: '/profile/profile.html'
       });
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
   })
 
 .run(function($ionicPlatform) {
@@ -42,5 +39,3 @@ angular.module('ionicFirebaseApp')
     }
   });
 });
-
-})());
